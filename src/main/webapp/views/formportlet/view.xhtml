@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+
+<f:view xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+	<h:head />
+	<h:body>
+		<h1>Rellene el formulario:</h1>
+
+		<h:form>
+
+			<h:panelGrid id="alumno" columns="3" border="1" cellpadding="10"
+				cellspacing="1">
+
+				<f:facet name="header">
+					<h:outputText value="Alumno" />
+				</f:facet>
+
+				<h:outputLabel value="IdAlumno" />
+
+				<h:inputText id="idAlumno" value="#{alumno.idAlumno}" size="10"
+					required="true" validatorId="com.fihoca.utilities.FieldsValidator"
+					label="Id Alumno">
+				</h:inputText>
+				<h:message for="idAlumno" style="color:red" />
+
+
+				<h:outputLabel value="Nombre" />
+
+				<h:inputText id="nombre" value="#{alumno.nombre}" size="10"
+					required="true" validatorId="com.fihoca.utilities.FieldsValidator"
+					label="Nombre">
+				</h:inputText>
+				<h:message for="nombre" style="color:red" />
+
+
+				<h:outputLabel value="Apellidos" />
+
+				<h:inputText id="apellidos" value="#{alumno.apellidos}" size="10"
+					required="true" validatorId="com.fihoca.utilities.FieldsValidator"
+					label="Apellidos">
+				</h:inputText>
+				<h:message for="apellidos" style="color:red" />
+
+
+				<h:outputLabel value="DNI" />
+
+				<h:inputText id="dni" value="#{alumno.dni}" size="10"
+					required="true" validatorId="com.fihoca.utilities.FieldsValidator"
+					label="Dni">
+				</h:inputText>
+				<h:message for="dni" style="color:red" />
+
+			</h:panelGrid>
+
+			<h:commandButton value="Submit" type="submit" action="#{alumno.add}" />
+
+
+		</h:form>
+
+	</h:body>
+</f:view>
