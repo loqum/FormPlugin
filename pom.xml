@@ -51,16 +51,6 @@
 	</build>
 	<dependencies>
 		<dependency>
-			<groupId>commons-fileupload</groupId>
-			<artifactId>commons-fileupload</artifactId>
-			<version>1.2.2</version>
-		</dependency>
-		<dependency>
-			<groupId>commons-io</groupId>
-			<artifactId>commons-io</artifactId>
-			<version>1.3.2</version>
-		</dependency>
-		<dependency>
 			<groupId>com.liferay.faces</groupId>
 			<artifactId>liferay-faces-bridge-impl</artifactId>
 			<version>3.2.4-ga5</version>
@@ -127,6 +117,13 @@
 			<version>1.18.2</version>
 			<scope>provided</scope>
 		</dependency>
+		<dependency>
+			<groupId>com.fihoca</groupId>
+			<artifactId>XmlFileManager</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<scope>system</scope>
+			<systemPath>${liferay.app.server.lib.global.dir}\XmlFileManager-0.0.1-SNAPSHOT.jar</systemPath>
+		</dependency>
 	</dependencies>
 	<repositories>
 		<repository>
@@ -146,20 +143,16 @@
 		</repository>
 	</repositories>
 	<profiles>
-		<profile>
-			<id>Liferay-v6.2-CE-(Tomcat-7)</id>
+	<profile>
+		<id>rfernandezm</id>
 			<properties>
 				<liferay.version>6.2.5</liferay.version>
 				<liferay.maven.plugin.version>6.2.5</liferay.maven.plugin.version>
-				<liferay.auto.deploy.dir>C:\Users\User\Documents\LiferayPortal
-					6.2\liferay-portal-6.2-ce-ga6\deploy</liferay.auto.deploy.dir>
-				<liferay.app.server.deploy.dir>C:\Users\User\Documents\LiferayPortal
-					6.2\liferay-portal-6.2-ce-ga6\tomcat-7.0.62\webapps</liferay.app.server.deploy.dir>
-				<liferay.app.server.lib.global.dir>C:\Users\User\Documents\LiferayPortal
-					6.2\liferay-portal-6.2-ce-ga6\tomcat-7.0.62\lib\ext</liferay.app.server.lib.global.dir>
-				<liferay.app.server.portal.dir>C:\Users\User\Documents\LiferayPortal
-					6.2\liferay-portal-6.2-ce-ga6\tomcat-7.0.62\webapps\ROOT</liferay.app.server.portal.dir>
+				<liferay.auto.deploy.dir>C:\Users\User\Documents\LiferayPortal 6.2\liferay-portal-6.2-ce-ga6\deploy</liferay.auto.deploy.dir>
+				<liferay.app.server.deploy.dir>C:\Users\User\Documents\LiferayPortal 6.2\liferay-portal-6.2-ce-ga6\tomcat-7.0.62\webapps</liferay.app.server.deploy.dir>
+				<liferay.app.server.lib.global.dir>C:\Users\User\Documents\LiferayPortal 6.2\liferay-portal-6.2-ce-ga6\tomcat-7.0.62\lib\ext</liferay.app.server.lib.global.dir>
+				<liferay.app.server.portal.dir>C:\Users\User\Documents\LiferayPortal 6.2\liferay-portal-6.2-ce-ga6\tomcat-7.0.62\webapps\ROOT</liferay.app.server.portal.dir>
 			</properties>
-		</profile>
-	</profiles>
+	</profile>
+</profiles>
 </project>

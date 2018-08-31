@@ -41,12 +41,13 @@ public class AlumnoBean implements Serializable {
 		this.dni = dni;
 	}
 
-	public String add(AlumnoBean alumno) throws Exception {
+	public String add() throws Exception {
 		System.out.println("Entra dentro del método add");
 
 		DocumentBuilderFactory factory = null;
 		DocumentBuilder builder = null;
 		Document document = null;
+		AlumnoBean alumno = new AlumnoBean();
 
 		try {
 			factory = DocumentBuilderFactory.newInstance();
